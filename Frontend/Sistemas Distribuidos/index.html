@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rescate de Alimentos — Sistema Web</title>
+  <!-- Vincula el CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!--
+    ==============================================
+    SISTEMA WEB: RESCATE DE ALIMENTOS (UI DEMO)
+    - Solo HTML + CSS (sin JS). Estructura lista para integrar lógica luego.
+    - Navegación por anclas #section con :target en CSS.
+    - Secciones requeridas por tu especificación.
+    ==============================================
+  -->
+
+  <!-- Pantalla de inicio / Login -->
+  <section id="login" class="screen login-screen">
+    <div class="login-card">
+      <header class="brand">
+        <div class="brand-mark" aria-hidden="true">🍎</div>
+        <div class="brand-copy">
+          <h1>Control y aprovechamiento social de alimentos</h1>
+          <p class="muted">Reduciendo desperdicio, multiplicando impacto</p>
+        </div>
+      </header>
+
+      <form class="form" aria-labelledby="login-title">
+        <h2 id="login-title">Iniciar sesión</h2>
+        <div class="form-grid">
+          <label class="field">
+            <span>Usuario</span>
+            <input type="text" name="usuario" placeholder="tu.usuario" required />
+          </label>
+
+          <label class="field">
+            <span>Contraseña</span>
+            <input type="password" name="password" placeholder="••••••••" required />
+          </label>
+
+          <label class="field">
+            <span>Rol</span>
+            <select name="rol" required>
+              <option value="" selected disabled>Selecciona un rol</option>
+              <option value="admin">Administrador (supermercados, fruterías, bodegas)</option>
+              <option value="org">Organización Social (receptora)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="actions">
+          <!-- En una app real, este botón validaría y redirigiría. Aquí navega al #dashboard -->
+          <a class="btn primary" href="#dashboard">Iniciar sesión</a>
+          <a class="btn ghost" href="#registro">Registrarse</a>
+        </div>
+      </form>
+
+      <footer class="login-foot">
+        <a class="tiny" href="#recuperar">¿Olvidaste tu contraseña?</a>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Shell general después del "login" -->
+  <div class="app" id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <a class="logo" href="#dashboard" aria-label="Volver al dashboard">🍎</a>
+
+      <nav class="menu" aria-label="Menú lateral">
+        <a href="#dashboard" class="menu-link">Dashboard</a>
+        <a href="#registro" class="menu-link">Registro de productos</a>
+        <a href="#inventario" class="menu-link">Inventario</a>
+        <a href="#alertas" class="menu-link">Alertas</a>
+        <a href="#donaciones" class="menu-link">Donaciones</a>
+        <a href="#reportes" class="menu-link">Reportes</a>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="content">
+      <!-- Barra superior -->
+      <header class="topbar" role="banner">
+        <div class="breadcrumb">Inicio / <strong>Panel Principal</strong></div>
+        <div class="top-actions">
+          <span class="chip ok">Conectado</span>
+          <a href="#login" class="btn tiny">Salir</a>
+        </div>
+      </header>
+
+      <!-- 2. Panel Principal (Dashboard) -->
+      <section id="dashboard" class="panel">
+        <h2>Panel Principal</h2>
+        <p class="muted">Resumen de estado y métricas rápidas.</p>
+
+        <!-- Tarjetas de KPIs -->
+        <div class="kpis">
+          <article class="card kpi">
+            <div class="kpi-head">
+              <h3>% próximos a vencer</h3>
+              <span class="badge warn">7 días</span>
+            </div>
+            <div class="kpi-body">
+              <!-- Placeholder de gráfica circular con solo CSS -->
+              <div class="ring" role="img" aria-label="Porcentaje de próximos a vencer">
+                <div class="ring-inner" style="--percent: 35" aria-hidden="true"></div>
+                <div class="ring-label">35%</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-head">
+              <h3>Alimentos para donación</h3>
+              <span class="badge danger">5 días</span>
+            </div>
+            <div class="kpi-body">
+              <div class="big-number" aria-label="Cantidad disponible para donación">128</div>
+              <div class="note">Unidades</div>
+            </div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-head">
+              <h3>Alertas activas</h3>
+              <span class="badge neutral">Sistema</span>
+            </div>
+            <div class="kpi-body">
+              <div class="big-number">9</div>
+              <div class="bars">
+                <div class="bar ok" style="--v: 45%" title="Verde"></div>
+                <div class="bar warn" style="--v: 30%" title="Amarillo"></div>
+                <div class="bar danger" style="--v: 25%" title="Rojo"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Accesos rápidos -->
+        <div class="quick">
+          <a class="btn primary" href="#registro">+ Registrar producto</a>
+          <a class="btn" href="#inventario">Ver inventario</a>
+          <a class="btn" href="#alertas">Ver alertas</a>
+          <a class="btn" href="#donaciones">Asignar donación</a>
+          <a class="btn ghost" href="#reportes">Generar reportes</a>
+        </div>
+      </section>
+
+      <!-- 3. Registro de Productos -->
+      <section id="registro" class="panel">
+        <h2>Registro de productos</h2>
+        <p class="muted">Completa el formulario y guarda el producto.</p>
+
+        <form class="form" aria-labelledby="registro-title">
+          <div class="form-grid two">
+            <label class="field">
+              <span>Nombre del producto</span>
+              <input type="text" name="nombre" placeholder="Ej: Leche entera 1L" required />
+            </label>
+
+            <label class="field">
+              <span>Categoría</span>
+              <select name="categoria" required>
+                <option value="" disabled selected>Selecciona una categoría</option>
+                <option>Frutas</option>
+                <option>Verduras</option>
+                <option>Lácteos</option>
+                <option>Enlatados</option>
+                <option>Panadería</option>
+                <option>Congelados</option>
+                <option>Otros</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Código de barras</span>
+              <input type="text" name="barcode" inputmode="numeric" placeholder="EAN/UPC" />
+            </label>
+
+            <label class="field">
+              <span>Fecha de registro</span>
+              <input type="date" name="f_registro" required />
+            </label>
+
+            <label class="field">
+              <span>Fecha de exposición</span>
+              <input type="date" name="f_exposicion" />
+            </label>
+
+            <label class="field">
+              <span>Fecha de vencimiento</span>
+              <input type="date" name="f_vencimiento" required />
+            </label>
+
+            <label class="field">
+              <span>Cantidad</span>
+              <input type="number" name="cantidad" min="1" step="1" placeholder="Ej: 24" required />
+            </label>
+
+            <label class="field">
+              <span>Proveedor</span>
+              <input type="text" name="proveedor" placeholder="Ej: Lácteos La Montaña" />
+            </label>
+
+            <label class="field">
+              <span>Estado</span>
+              <select name="estado" required>
+                <option value="" disabled selected>Selecciona estado</option>
+                <option>Disponible</option>
+                <option>En promoción</option>
+                <option>En donación</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Guardar producto</button>
+            <a class="btn ghost" href="#inventario">Ir al inventario</a>
+          </div>
+        </form>
+      </section>
+
+      <!-- 4. Inventario -->
+      <section id="inventario" class="panel">
+        <h2>Inventario</h2>
+        <p class="muted">Lista de productos registrados con filtros rápidos.</p>
+
+        <!-- Filtros -->
+        <div class="filters">
+          <label class="chip check">
+            <input type="checkbox" />
+            <span>Próximos a vencer (7 días)</span>
+          </label>
+
+          <label class="chip check">
+            <input type="checkbox" />
+            <span>Alimentos para donación (5 días)</span>
+          </label>
+
+          <div class="spacer"></div>
+
+          <label class="field inline">
+            <input type="search" placeholder="Buscar por nombre o categoría…" />
+          </label>
+        </div>
+
+        <!-- Tabla -->
+        <div class="table-wrap">
+          <table class="table" aria-describedby="inv-desc">
+            <caption id="inv-desc" class="sr-only">Tabla de inventario con acciones por fila</caption>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Fecha de vencimiento</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Ejemplos de filas (datos de muestra) -->
+              <tr>
+                <td>00124</td>
+                <td>Leche entera 1L</td>
+                <td>Lácteos</td>
+                <td>2025-09-02</td>
+                <td>24</td>
+                <td><span class="tag ok">Disponible</span></td>
+                <td class="actions-cell">
+                  <a href="#registro" class="btn tiny">Editar</a>
+                  <button class="btn tiny ghost">Eliminar</button>
+                  <button class="btn tiny">Cambiar estado</button>
+                </td>
+              </tr>
+              <tr class="is-warn">
+                <td>00157</td>
+                <td>Yogurt griego</td>
+                <td>Lácteos</td>
+                <td>2025-08-30</td>
+                <td>12</td>
+                <td><span class="tag warn">En promoción</span></td>
+                <td class="actions-cell">
+                  <a href="#registro" class="btn tiny">Editar</a>
+                  <button class="btn tiny ghost">Eliminar</button>
+                  <button class="btn tiny">Cambiar estado</button>
+                </td>
+              </tr>
+              <tr class="is-danger">
+                <td>00189</td>
+                <td>Manzana roja</td>
+                <td>Frutas</td>
+                <td>2025-08-28</td>
+                <td>50</td>
+                <td><span class="tag danger">En donación</span></td>
+                <td class="actions-cell">
+                  <a href="#registro" class="btn tiny">Editar</a>
+                  <button class="btn tiny ghost">Eliminar</button>
+                  <button class="btn tiny">Cambiar estado</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5. Alertas Automáticas -->
+      <section id="alertas" class="panel">
+        <h2>Alertas automáticas</h2>
+        <p class="muted">Notificaciones generadas según fechas de vencimiento.</p>
+
+        <div class="legend">
+          <span class="dot ok"></span> <strong>Verde:</strong> vigentes
+          <span class="dot warn"></span> <strong>Amarillo:</strong> próximos a vencer (7 días)
+          <span class="dot danger"></span> <strong>Rojo:</strong> alimentos para donación (5 días)
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <header class="card-head">
+              <h3><span class="dot warn"></span> Notificación 1 — 7 días antes</h3>
+              <span class="badge warn">Promoción especial</span>
+            </header>
+            <ul class="list">
+              <li>Yogurt griego — vence 2025-08-30 (12 u.)</li>
+              <li>Queso fresco — vence 2025-09-01 (8 u.)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h3><span class="dot danger"></span> Notificación 2 — 5 días antes</h3>
+              <span class="badge danger">Donación</span>
+            </header>
+            <ul class="list">
+              <li>Manzana roja — vence 2025-08-28 (50 u.)</li>
+              <li>Pan tajado — vence 2025-08-27 (30 u.)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h3><span class="dot ok"></span> Vigentes</h3>
+              <span class="badge neutral">En buen estado</span>
+            </header>
+            <ul class="list">
+              <li>Leche entera 1L — vence 2025-09-02 (24 u.)</li>
+              <li>Atún en lata — vence 2026-01-10 (100 u.)</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- 6. Módulo de Donaciones -->
+      <section id="donaciones" class="panel">
+        <h2>Donaciones</h2>
+        <p class="muted">Conecta productos próximos a vencer con organizaciones sociales.</p>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><span class="sr-only">Seleccionar</span></th>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Vence</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" aria-label="Seleccionar 00189" /></td>
+                <td>00189</td>
+                <td>Manzana roja</td>
+                <td>2025-08-28</td>
+                <td>50</td>
+                <td><span class="tag danger">En donación</span></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" aria-label="Seleccionar 00157" /></td>
+                <td>00157</td>
+                <td>Yogurt griego</td>
+                <td>2025-08-30</td>
+                <td>12</td>
+                <td><span class="tag warn">En promoción</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="donacion-form">
+          <h3>Asignar donación</h3>
+          <form class="form">
+            <div class="form-grid two">
+              <label class="field">
+                <span>Organización social</span>
+                <select required>
+                  <option value="" disabled selected>Selecciona beneficiario</option>
+                  <option>Fundación Buen Vecino</option>
+                  <option>Comedor Comunitario San José</option>
+                  <option>Hogar de Paso Manos Unidas</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Fecha de entrega</span>
+                <input type="date" required />
+              </label>
+
+              <label class="field">
+                <span>Beneficiario (contacto)</span>
+                <input type="text" placeholder="Nombre del responsable" />
+              </label>
+
+              <label class="field">
+                <span>Cantidad entregada (total)</span>
+                <input type="number" min="1" step="1" placeholder="Ej: 40" />
+              </label>
+            </div>
+
+            <div class="actions">
+              <button class="btn primary" type="submit">Registrar entrega</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 7. Reportes y Estadísticas -->
+      <section id="reportes" class="panel">
+        <h2>Reportes y estadísticas</h2>
+        <p class="muted">Descargas disponibles en PDF / Excel (UI de ejemplo).</p>
+
+        <div class="grid-3">
+          <article class="card stat">
+            <h3>Alimentos rescatados</h3>
+            <div class="stat-main">
+              <div class="big-number">356</div>
+              <div class="note">kg</div>
+            </div>
+            <div class="progress">
+              <div class="progress-fill" style="--p: 70%"></div>
+            </div>
+            <div class="actions">
+              <a class="btn" role="button">PDF</a>
+              <a class="btn ghost" role="button">Excel</a>
+            </div>
+          </article>
+
+          <article class="card stat">
+            <h3>Productos donados</h3>
+            <div class="stat-main">
+              <div class="big-number">290</div>
+              <div class="note">unidades</div>
+            </div>
+            <div class="progress">
+              <div class="progress-fill" style="--p: 55%"></div>
+            </div>
+            <div class="actions">
+              <a class="btn" role="button">PDF</a>
+              <a class="btn ghost" role="button">Excel</a>
+            </div>
+          </article>
+
+          <article class="card stat">
+            <h3>Impacto social</h3>
+            <div class="stat-main">
+              <div class="big-number">120</div>
+              <div class="note">familias</div>
+            </div>
+            <div class="progress">
+              <div class="progress-fill" style="--p: 35%"></div>
+            </div>
+            <div class="actions">
+              <a class="btn" role="button">PDF</a>
+              <a class="btn ghost" role="button">Excel</a>
+            </div>
+          </article>
+
+          <article class="card stat">
+            <h3>Ahorro estimado</h3>
+            <div class="stat-main">
+              <div class="big-number">$ 4.5 M</div>
+              <div class="note">para el comercio</div>
+            </div>
+            <div class="progress">
+              <div class="progress-fill" style="--p: 60%"></div>
+            </div>
+            <div class="actions">
+              <a class="btn" role="button">PDF</a>
+              <a class="btn ghost" role="button">Excel</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Pantalla "Recuperar contraseña" (simple) -->
+      <section id="recuperar" class="panel">
+        <h2>Recuperar contraseña</h2>
+        <p class="muted">Ingresa tu usuario o correo para enviarte un enlace de recuperación.</p>
+        <form class="form small">
+          <label class="field">
+            <span>Usuario o correo</span>
+            <input type="text" placeholder="usuario@correo.com" required />
+          </label>
+          <div class="actions">
+            <button class="btn primary" type="submit">Enviar enlace</button>
+            <a class="btn ghost" href="#login">Volver</a>
+          </div>
+        </form>
+      </section>
+
+      <footer class="foot">
+        <small>© 2025 — Sistema Web de Rescate de Alimentos. UI de referencia (HTML + CSS).</small>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
