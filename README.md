@@ -32,4 +32,12 @@ RECURSOS NECESARIOS Y HERRAMIENTAS:	13
 CRONOGRAMA DE ACTIVIDADES:	15
 RESULTADOS	16
 CONCLUSIONES	17
-
+------------------------------------------------------
+# Resumen del Proyecto #
+En Colombia se pierden anualmente cerca de 9,76 millones de toneladas de alimentos, lo que equivale al 34 % de la producción nacional, generando impactos negativos en la seguridad alimentaria, la economía y el medio ambiente. Este panorama resulta aún más crítico si se considera que más de la mitad de la población vive en condiciones de inseguridad alimentaria, mientras que toneladas de productos aptos para el consumo son desechados por vencimientos inminentes, ineficiencias logísticas o falta de mecanismos de redistribución.
+Se busca ofrecer una solución tecnológica innovadora que articule a supermercados, fruterías, tiendas de barrio, centros de distribución y organizaciones sociales. Mediante un repositorio digital y una interfaz web, el sistema permitirá registrar productos, generar alertas automáticas sobre fechas de vencimiento, promover la venta anticipada a bajo costo y facilitar la donación de alimentos a poblaciones vulnerables, en cumplimiento de la Ley 1990 de 2019.
+--------------------------------------------------------
+# Planteamiento del problema: #
+En Colombia se desperdicia el 34 % de la producción nacional de alimentos debido a la falta de sistemas de control y redistribución, lo que genera pérdidas económicas, impacto ambiental y limita el acceso a la alimentación de millones de personas en situación de inseguridad alimentaria.
+----------------------------------------------------------
+# Justificación del Proyecto: #
