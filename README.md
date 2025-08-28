@@ -41,3 +41,15 @@ Se busca ofrecer una solución tecnológica innovadora que articule a supermerca
 En Colombia se desperdicia el 34 % de la producción nacional de alimentos debido a la falta de sistemas de control y redistribución, lo que genera pérdidas económicas, impacto ambiental y limita el acceso a la alimentación de millones de personas en situación de inseguridad alimentaria.
 ----------------------------------------------------------
 # Justificación del Proyecto: #
+El diseño e implementación de un Sistema Web para el Control y Aprovechamiento Social de Alimentos Próximos a Vencer se justifica en múltiples dimensiones:
+Social: Contribuye a disminuir los índices de inseguridad alimentaria en poblaciones vulnerables mediante la donación oportuna de alimentos aún aptos para el consumo, en concordancia con la Ley 1990 de 2019, que regula la entrega gratuita de productos próximos a vencer.
+Económica: Permite a los comerciantes reducir pérdidas financieras al implementar alertas que fomenten la venta anticipada con descuentos y la gestión inteligente de inventarios, optimizando así la cadena de suministro.
+-------------------------------------------------------------
+# OBJECTIVOS: #
+# OJECTIVO GENERAL: # 
+Diseñar e implementar un sistema web para el control y aprovechamiento social de alimentos próximos a vencer, que permita reducir el desperdicio alimentario mediante el registro, control de inventarios, alertas automáticas y mecanismos de redistribución hacia poblaciones vulnerables, en concordancia con la normativa vigente y los Objetivos de Desarrollo Sostenible.
+# OBJECTIVOS ESPECIFICOS # 
+•	Diagnosticar la situación actual del desperdicio de alimentos en supermercados, fruterías, tiendas de barrio y centros de distribución, identificando sus principales causas y oportunidades de mejora.
+•	Diseñar la arquitectura del sistema web, integrando módulos de registro de productos, control de fechas de vencimiento, gestión de inventarios y generación de alertas automáticas.
+•	Implementar un repositorio digital que permita la clasificación de alimentos próximos a vencer para su venta anticipada, donación o redistribución a organizaciones sociales.
+•	Desarrollar un sistema de notificaciones que alerte con antelación (7 y 5 días antes del vencimiento) sobre los productos, promoviendo su rotación, oferta o donación oportuna.
