@@ -49,7 +49,7 @@ Económica: Permite a los comerciantes reducir pérdidas financieras al implemen
 # OJECTIVO GENERAL: # 
 Diseñar e implementar un sistema web para el control y aprovechamiento social de alimentos próximos a vencer, que permita reducir el desperdicio alimentario mediante el registro, control de inventarios, alertas automáticas y mecanismos de redistribución hacia poblaciones vulnerables, en concordancia con la normativa vigente y los Objetivos de Desarrollo Sostenible.
 # OBJECTIVOS ESPECIFICOS # 
-•	Diagnosticar la situación actual del desperdicio de alimentos en supermercados, fruterías, tiendas de barrio y centros de distribución, identificando sus principales causas y oportunidades de mejora.
-•	Diseñar la arquitectura del sistema web, integrando módulos de registro de productos, control de fechas de vencimiento, gestión de inventarios y generación de alertas automáticas.
-•	Implementar un repositorio digital que permita la clasificación de alimentos próximos a vencer para su venta anticipada, donación o redistribución a organizaciones sociales.
-•	Desarrollar un sistema de notificaciones que alerte con antelación (7 y 5 días antes del vencimiento) sobre los productos, promoviendo su rotación, oferta o donación oportuna.
+* Diagnosticar la situación actual del desperdicio de alimentos en supermercados, fruterías, tiendas de barrio y centros de distribución, identificando sus principales causas y oportunidades de mejora.
+* Diseñar la arquitectura del sistema web, integrando módulos de registro de productos, control de fechas de vencimiento, gestión de inventarios y generación de alertas automáticas.
+* Implementar un repositorio digital que permita la clasificación de alimentos próximos a vencer para su venta anticipada, donación o redistribución a organizaciones sociales.
+* Desarrollar un sistema de notificaciones que alerte con antelación (7 y 5 días antes del vencimiento) sobre los productos, promoviendo su rotación, oferta o donación oportuna.
