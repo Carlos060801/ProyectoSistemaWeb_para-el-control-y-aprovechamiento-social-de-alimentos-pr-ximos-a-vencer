@@ -87,6 +87,7 @@ Pruebas y validación:
 ---------------------------------------------------------------
 # Alcance del Proyecto
 INCLUYE:
+
 * Creación de un sistema web con interfaz amigable accesible desde cualquier navegador.
 * Registro y control de alimentos próximos a vencer, con campos clave como: fecha de registro, fecha de vencimiento, proveedor, cantidad y estado.
 * Generación de alertas automáticas:
@@ -95,6 +96,7 @@ INCLUYE:
 * Clasificación de alimentos para su venta anticipada con descuento o redistribución gratuita a organizaciones sociales.
 * Reportes estadísticos sobre reducción de desperdicios, cantidad de alimentos redistribuidos y beneficiarios atendidos.
 * Cumplimiento de la Ley 1990 de 2019 como respaldo normativo para la entrega gratuita de alimentos aptos para el consumo.
+
 NO INCLUYE PRIMERA FASE:
 * Aplicación móvil nativa (Android/iOS).
 * Integración con sistemas externos de contabilidad o ERP.
