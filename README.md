@@ -77,12 +77,12 @@ Análisis y diseño del sistema:
 * Desarrollo e implementación:
 •	Programación del sistema utilizando frameworks modernos (ejemplo: Flask/Django para backend, HTML/CSS/JavaScript/React para frontend, PostgreSQL como base de datos).
 Desarrollo de módulos clave:
-•	Registro de productos.
-•	Listado e inventario de productos.
-•	Alertas automáticas de vencimiento (7 y 5 días antes).
-•	Clasificación de productos para venta anticipada, donación o redistribución.
+* Registro de productos.
+* Listado e inventario de productos.
+*  Alertas automáticas de vencimiento (7 y 5 días antes).
+* lasificación de productos para venta anticipada, donación o redistribución.
 Pruebas y validación:
-•	Ejecución de pruebas funcionales, de usabilidad y rendimiento.
-•	Piloto en un establecimiento aliado para evaluar el impacto en la reducción de desperdicio y redistribución social.
+* Ejecución de pruebas funcionales, de usabilidad y rendimiento.
+* Piloto en un establecimiento aliado para evaluar el impacto en la reducción de desperdicio y redistribución social.
 
 
