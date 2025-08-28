@@ -55,3 +55,22 @@ Diseñar e implementar un sistema web para el control y aprovechamiento social d
 * Diseñar la arquitectura del sistema web, integrando módulos de registro de productos, control de fechas de vencimiento, gestión de inventarios y generación de alertas automáticas.
 * Implementar un repositorio digital que permita la clasificación de alimentos próximos a vencer para su venta anticipada, donación o redistribución a organizaciones sociales.
 * Desarrollar un sistema de notificaciones que alerte con antelación (7 y 5 días antes del vencimiento) sobre los productos, promoviendo su rotación, oferta o donación oportuna.
+-----------------------------------------------------------
+# Marco Teorico #
+El desperdicio de alimentos es un problema global que impacta la seguridad alimentaria, la economía y el medio ambiente. En Colombia se pierden anualmente 9,76 millones de toneladas de alimentos (34 % de la producción nacional), lo que contribuye al 10 % de las emisiones de gases de efecto invernadero, mientras el 54,2 % de la población enfrenta inseguridad alimentaria. Experiencias como EatCloud y Corabastos demuestran que las soluciones tecnológicas permiten redistribuir alimentos próximos a vencer de manera eficiente. Además, la Ley 1990 de 2019 respalda la donación obligatoria de estos productos, otorgando soporte legal a iniciativas como el desarrollo de sistemas tecnológicos para su control y aprovechamiento social.
+-------------------------------------------------------------
+# Marco Conceptual #
+El desperdicio de alimentos corresponde a la pérdida de productos a lo largo de la cadena de suministro que aún podrían consumirse. El aprovechamiento social de alimentos busca rescatar y redistribuir productos próximos a vencer para beneficiar a poblaciones vulnerables, contribuyendo a la seguridad alimentaria, entendida como el acceso garantizado a alimentos suficientes y nutritivos. Un sistema web permite gestionar y automatizar estos procesos, incorporando notificaciones automáticas que alertan sobre la proximidad del vencimiento, facilitando su donación o venta anticipada.
+--------------------------------------------------------------
+# Marco Historica # 
+El desperdicio de alimentos ha acompañado el crecimiento urbano y la industrialización, acentuándose en Colombia en las últimas dos décadas. En 2011 la FAO alertó sobre el desperdicio global de un tercio de la producción mundial, y en 2016 el DNP estimó en más de 9 millones de toneladas las pérdidas anuales en el país. Con la Ley 1990 de 2019 se estableció la obligación de donar alimentos próximos a vencer, lo que abrió paso a iniciativas como EatCloud (2020) y las alianzas de Corabastos con el Banco de Alimentos (2024). Pese a estos avances, el desperdicio continúa siendo un reto en ciudades como Neiva, donde se requieren soluciones tecnológicas que reduzcan pérdidas y generen impacto social y ambiental positivo.
+--------------------------------------------------------------
+# Metodología 
+La propuesta para el desarrollo del Sistema Web para el Control y Aprovechamiento Social de Alimentos Próximos a Vencer se fundamenta en un enfoque ágil, específicamente bajo el marco de trabajo Scrum, el cual permitirá un desarrollo iterativo, flexible y con retroalimentación constante de los actores involucrados (empresas, fruterías, instituciones y organizaciones sociales).
+# Fases: 
+Levantamiento de requisitos:
+* Recolección de información en supermercados, fruterías, tiendas de barrio y centros de distribución.
+* Identificación de procesos actuales de manejo de alimentos próximos a vencer y necesidades específicas de los usuarios.
+Análisis y diseño del sistema:
+* Diseño de la arquitectura tecnológica (backend, frontend y base de datos).
+* Elaboración de diagramas de casos de uso, flujo de información y estructura de la base de datos (ejemplo: tabla productos con campos de identificación, fecha de vencimiento, cantidad, proveedor, estado, etc.).
