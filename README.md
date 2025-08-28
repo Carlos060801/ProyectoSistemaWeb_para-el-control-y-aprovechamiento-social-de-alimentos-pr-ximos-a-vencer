@@ -1,6 +1,7 @@
 <img width="215" height="230" alt="image" src="https://github.com/user-attachments/assets/3cfdf34d-3d6a-4297-97d9-db08102d9b0d" />
-# Proyecto Sistema Web para el control y aprovechamiento social de alimentos proximos a vencer #
 
+# Proyecto Sistema Web para el control y aprovechamiento social de alimentos proximos a vencer #
+------------------------------------------------------------------------------------------------
 # Integrantes : Pedro Pablo Paque, Tito Fabian Aranda, Carlos Daniel Culma
 -----------------------------------------------------------------------------------------------
 # Contenido #
