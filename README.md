@@ -87,17 +87,17 @@ Pruebas y validación:
 ---------------------------------------------------------------
 # Alcance del Proyecto
 INCLUYE:
-•	Creación de un sistema web con interfaz amigable accesible desde cualquier navegador.
-•	Registro y control de alimentos próximos a vencer, con campos clave como: fecha de registro, fecha de vencimiento, proveedor, cantidad y estado.
-•	Generación de alertas automáticas:
-•	A las 168 horas (7 días) antes del vencimiento → para activar promociones especiales.
-•	A las 120 horas (5 días) antes del vencimiento → para destinar los productos a donación.
-•	Clasificación de alimentos para su venta anticipada con descuento o redistribución gratuita a organizaciones sociales.
-•	Reportes estadísticos sobre reducción de desperdicios, cantidad de alimentos redistribuidos y beneficiarios atendidos.
-•	Cumplimiento de la Ley 1990 de 2019 como respaldo normativo para la entrega gratuita de alimentos aptos para el consumo.
+* Creación de un sistema web con interfaz amigable accesible desde cualquier navegador.
+* Registro y control de alimentos próximos a vencer, con campos clave como: fecha de registro, fecha de vencimiento, proveedor, cantidad y estado.
+* Generación de alertas automáticas:
+* A las 168 horas (7 días) antes del vencimiento → para activar promociones especiales.
+* A las 120 horas (5 días) antes del vencimiento → para destinar los productos a donación.
+* Clasificación de alimentos para su venta anticipada con descuento o redistribución gratuita a organizaciones sociales.
+* Reportes estadísticos sobre reducción de desperdicios, cantidad de alimentos redistribuidos y beneficiarios atendidos.
+* Cumplimiento de la Ley 1990 de 2019 como respaldo normativo para la entrega gratuita de alimentos aptos para el consumo.
 NO INCLUYE PRIMERA FASE:
-•	Aplicación móvil nativa (Android/iOS).
-•	Integración con sistemas externos de contabilidad o ERP.
-•	Logística de transporte de alimentos (será responsabilidad de las entidades participantes).
+* Aplicación móvil nativa (Android/iOS).
+* Integración con sistemas externos de contabilidad o ERP.
+* Logística de transporte de alimentos (será responsabilidad de las entidades participantes).
 
 
